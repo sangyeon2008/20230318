@@ -1,0 +1,34 @@
+# 160586 대충만든 자판
+def solution(keymap, targets):
+    cnt=0
+    dictionary={}
+    for i in range(len(keymap)):
+        if keymap[i][i]=="A":
+            dictionary["A"]=i
+        elif keymap[i][i]=="B":
+            dictionary["B"]=i
+
+        elif keymap[i][i]=="C":
+            dictionary["C"]=i
+
+        elif keymap[i][i]=="D":
+            dictionary["D"]=i
+
+        elif keymap[i][i]=="E":
+            dictionary["E"]=i
+            
+    for j in range(len(targets)):
+        if targets[j]==["A"]:
+            cnt+=["A"]
+        elif targets[j]==["B"]:
+            cnt+=["B"]
+        elif targets[j]==["C"]:
+            cnt+=["D"]
+        elif targets[j]==["E"]:
+            cnt+=["E"]
+
+    return cnt
+
+    # dict={A: ,B: ,C: ,D: ,E: ,F: }
+
+print(["ABACD", "BCEFD"],["ABCD","AABB"])
